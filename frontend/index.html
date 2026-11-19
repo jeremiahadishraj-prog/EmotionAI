@@ -459,7 +459,7 @@ const getModel=()=>{try{return localStorage.getItem(MODN)||''}catch(e){return ''
    for example: const DEFAULT_BACKEND='https://emotionai-api.onrender.com';
    Never put an API key in this file. */
 const BKN='emotionai.backend';
-const DEFAULT_BACKEND='';
+const DEFAULT_BACKEND='https://emotionai-backend-w1qz.onrender.com';
 const getBackend=()=>{let u='';try{u=localStorage.getItem(BKN)||''}catch(e){}u=(u||DEFAULT_BACKEND||'').trim().replace(/\/+$/,'');
  if(!u&&/^(localhost|127\.0\.0\.1)$/.test(location.hostname))u='http://localhost:8000';
  return /^https?:\/\//.test(u)?u:''};
